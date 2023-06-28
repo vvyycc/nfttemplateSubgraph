@@ -1,0 +1,39 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: nftFactory
+    network: sepolia
+    source:
+      address: "0xcc28bCd8699089FB9d6A7F951C2Cd17E649Ee399"
+      abi: nftFactory
+      startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - BatchMetadataUpdate
+        - CreatedNFT
+        - MetadataUpdate
+        - Transfer
+      abis:
+        - name: nftFactory
+          file: ./abis/nftFactory.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: BatchMetadataUpdate(uint256,uint256)
+          handler: handleBatchMetadataUpdate
+        - event: CreatedNFT(indexed uint256,string)
+          handler: handleCreatedNFT
+        - event: MetadataUpdate(uint256)
+          handler: handleMetadataUpdate
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+      file: ./src/nft-factory.ts
