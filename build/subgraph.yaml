@@ -6,9 +6,9 @@ dataSources:
     name: nftFactory
     network: sepolia
     source:
-      address: "0xcc28bCd8699089FB9d6A7F951C2Cd17E649Ee399"
+      address: "0xFE769F13aE7A2B78B8a763385c3CD362FD511889"
       abi: nftFactory
-      startBlock: 0
+      startBlock: 3802331
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
