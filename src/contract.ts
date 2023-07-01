@@ -5,7 +5,7 @@ import {
   CreatedNFT as CreatedNFTEvent,
   MetadataUpdate as MetadataUpdateEvent,
   Transfer as TransferEvent
-} from "../generated/nftFactory/nftFactory"
+} from "../albumnfts/generated/Contract/Contract"
 import {
   Approval,
   ApprovalForAll,
@@ -13,7 +13,7 @@ import {
   CreatedNFT,
   MetadataUpdate,
   Transfer
-} from "../generated/schema"
+} from "../albumnfts/generated/schema"
 
 export function handleApproval(event: ApprovalEvent): void {
   let entity = new Approval(

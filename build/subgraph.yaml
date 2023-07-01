@@ -3,12 +3,12 @@ schema:
   file: schema.graphql
 dataSources:
   - kind: ethereum
-    name: nftFactory
+    name: Contract
     network: sepolia
     source:
-      address: "0xFE769F13aE7A2B78B8a763385c3CD362FD511889"
-      abi: nftFactory
-      startBlock: 3802331
+      address: "0x5311d1A54eDF3e97F21e3A060e7494394EA8048B"
+      abi: Contract
+      startBlock: 3803907
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -21,8 +21,8 @@ dataSources:
         - MetadataUpdate
         - Transfer
       abis:
-        - name: nftFactory
-          file: nftFactory\abis\nftFactory.json
+        - name: Contract
+          file: Contract\abis\Contract.json
       eventHandlers:
         - event: Approval(indexed address,indexed address,indexed uint256)
           handler: handleApproval
@@ -36,4 +36,4 @@ dataSources:
           handler: handleMetadataUpdate
         - event: Transfer(indexed address,indexed address,indexed uint256)
           handler: handleTransfer
-      file: nftFactory\nftFactory.wasm
+      file: Contract\Contract.wasm

@@ -7,10 +7,10 @@ import {
   afterAll
 } from "matchstick-as/assembly/index"
 import { Address, BigInt } from "@graphprotocol/graph-ts"
-import { Approval } from "../generated/schema"
-import { Approval as ApprovalEvent } from "../generated/nftFactory/nftFactory"
-import { handleApproval } from "../src/nftFactory"
-import { createApprovalEvent } from "./nftFactory-utils"
+import { Approval } from "../albumnfts/generated/schema"
+import { Approval as ApprovalEvent } from "../albumnfts/generated/Contract/Contract"
+import { handleApproval } from "../src/contract"
+import { createApprovalEvent } from "./contract-utils"
 
 // Tests structure (matchstick-as >=0.5.0)
 // https://thegraph.com/docs/en/developer/matchstick/#tests-structure-0-5-0

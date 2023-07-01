@@ -150,9 +150,9 @@ export class Transfer__Params {
   }
 }
 
-export class nftFactory extends ethereum.SmartContract {
-  static bind(address: Address): nftFactory {
-    return new nftFactory("nftFactory", address);
+export class Contract extends ethereum.SmartContract {
+  static bind(address: Address): Contract {
+    return new Contract("Contract", address);
   }
 
   balanceOf(owner: Address): BigInt {
