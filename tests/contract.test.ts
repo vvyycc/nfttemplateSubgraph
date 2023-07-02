@@ -7,8 +7,8 @@ import {
   afterAll
 } from "matchstick-as/assembly/index"
 import { Address, BigInt } from "@graphprotocol/graph-ts"
-import { Approval } from "../albumnfts/generated/schema"
-import { Approval as ApprovalEvent } from "../albumnfts/generated/Contract/Contract"
+import { Approval } from "../generated/schema"
+import { Approval as ApprovalEvent } from "../generated/Contract/Contract"
 import { handleApproval } from "../src/contract"
 import { createApprovalEvent } from "./contract-utils"
 

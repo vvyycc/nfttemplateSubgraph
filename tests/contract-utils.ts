@@ -7,7 +7,7 @@ import {
   CreatedNFT,
   MetadataUpdate,
   Transfer
-} from "../albumnfts/generated/Contract/Contract"
+} from "../generated/Contract/Contract"
 
 export function createApprovalEvent(
   owner: Address,
